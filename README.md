@@ -2,6 +2,11 @@
 
 Official code for "View Synthesis with Sculpted Neural Points"
 
+Paper link:
+
+Video link:
+[![Video](https://img.youtube.com/vi/ctPBhvgVOow/0.jpg)](https://www.youtube.com/watch?v=ctPBhvgVOow)
+
 ![](https://github.com/princeton-vl/SNP/blob/main/figs/fig1.png)
 
 # Setup
