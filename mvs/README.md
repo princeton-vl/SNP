@@ -7,7 +7,7 @@ We here use the `fern` scene as an example on how to get a pose and a dense dept
 ## 1. install additional dependencies
 
 ### 1.1 Install CER-MVS
-We use a (slightly customized) [CER-MVS]() network. Install the following dependencies in the `snp` enviroment in order to run the MVS network.
+We use a (slightly customized) [CER-MVS](https://github.com/princeton-vl/CER-MVS) network. Install the following dependencies in the `snp` enviroment in order to run the MVS network.
 
 ```
 conda activate snp
@@ -66,7 +66,7 @@ The depth maps are saved as `.pfm` files under ./mvs_depths/ft_depths/fern/depth
 
 ## 6. Rearrange the output files
 
-Now you can treat your own scene as an extra LLFF scene. For example, you can move the output poses and depths into the main data folder and run the training script following the instructions in the main [README](../README.md):
+Now you can treat your own scene as an extra LLFF scene. For example, you can move the output poses and depths into the main data folder and run the training script following the instructions in the main [README](https://github.com/princeton-vl/SNP):
 
 ```
 mv ./raw_images_resized/fern ../data/LLFF/raw
