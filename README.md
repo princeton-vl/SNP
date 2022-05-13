@@ -1,13 +1,12 @@
 # View Synthesis with Sculpted Neural Points
 
-Official code for "View Synthesis with Sculpted Neural Points"
+Official code for [View Synthesis with Sculpted Neural Points](https://arxiv.org/abs/2205.05869)
 
-Paper link:
-
-Video link:
-[![Video](https://img.youtube.com/vi/ctPBhvgVOow/0.jpg)](https://www.youtube.com/watch?v=ctPBhvgVOow)
-
+[![](https://github.com/princeton-vl/SNP/blob/main/figs/youtube_thumbnail.png)](https://www.youtube.com/watch?v=ctPBhvgVOow)
 ![](https://github.com/princeton-vl/SNP/blob/main/figs/fig1.png)
+
+
+
 
 # Setup
 We recommend installing the dependencies using Anaconda. Run the following commands to create a new env:
@@ -98,4 +97,12 @@ Note: for people who don't have GPUs with 48GB memory and/or want higher renderi
 See the [link](mvs/README.md) here.
 
 # Citation
-
+If you find this repository useful, please cite
+```
+@article{zuo2022view,
+  title={View Synthesis with Sculpted Neural Points},
+  author={Yiming Zuo and Jia Deng},
+  journal={arXiv preprint arXiv:2205.05869},
+  year={2022}
+}
+```
