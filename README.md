@@ -93,6 +93,11 @@ you will find this GIF in `./saved_videos` and the evaluation numbers are printe
 
 ![](https://github.com/princeton-vl/SNP/blob/main/figs/fern.gif)
 
+For TNT, run the following command:
+```
+sh TNT_Masked_pcloud_pulsar_eval.sh <scene_name>
+```
+
 # Train from Scratch
 Run
 ```
