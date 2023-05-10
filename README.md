@@ -25,6 +25,8 @@ Note: you will need a NVIDIA GPU with at least 11 GB memory to run the pre-train
 # Prepare the Datasets
 You can find the pre-processed DTU and LLFF datasets in the [Google Drive link](https://drive.google.com/drive/folders/189nUV9_9YM_0bLW1Y97SQ1nK_EVpxGW6?usp=sharing).
 
+TanksAndTemples (TNT) dataset is under this [link](https://drive.google.com/file/d/1ZH1zTbl6c5QtTJyxfTG1toVEPSkdSwXz/view?usp=share_link).
+
 Put the raw data and depths under `./data`.
 
 The datasets should have the following structure:
@@ -36,6 +38,10 @@ The datasets should have the following structure:
 |   ├── LLFF
 |   |   └── depths                                                                                                                            
 │   │   └── raw
+|   ├── TanksAndTemples
+|   |   └── depths  
+|   |   └── processed_masks
+|   |   └── ...
 ```
 
 # Evaluate the Pre-trained Models
@@ -44,6 +50,8 @@ The easiest way to get started is to try our pre-trained checkpoints.
 You can find the saved checkpoints/pointclouds in the [Google Drive link](https://drive.google.com/drive/folders/189nUV9_9YM_0bLW1Y97SQ1nK_EVpxGW6?usp=sharing).
 
 Put the downloaded `*.pth` and `*.pt` under `./saved_checkpoints` and `./saved_pointclouds`, respectively.
+
+For the TNT dataset, the checkpoints and pointclouds are in [this link](https://drive.google.com/drive/folders/1GVO5v8XZO0Navh50eIvpiYAYbvr56g6K?usp=share_link) and [this link](https://drive.google.com/file/d/1eSVGHC6NFr06rW0xbR94b1wytntSbDqm/view?usp=share_link), respectively.
 
 The checkpoints' file size could be large. Therefore, you can download the checkpoints on each individual scenes separately, but please put them following this structure:
 
@@ -55,6 +63,9 @@ The checkpoints' file size could be large. Therefore, you can download the check
 |   ├── LLFF
 |   |   └── ..._fern_....pth   # checkpoints for the fern scene 
 |   |   └── ...  
+|   ├── TNT
+|   |   └── ..._Ignatius....pth   # checkpoints for the Ignatius scene 
+|   |   └── ...  
 |
 ├── saved_pointclouds                                                                                                                                                                                                      
 │   ├── DTU                                                                                                  
@@ -62,6 +73,9 @@ The checkpoints' file size could be large. Therefore, you can download the check
 |   |   └── ...                                                                        
 |   ├── LLFF
 |   |   └── ..._fern_....pt   # sculpted pointclouds for the fern scene 
+|   |   └── ...  
+|   ├── TNT
+|   |   └── Ignatius.ply   # sculpted pointclouds for the Ignatius scene 
 |   |   └── ...  
 ```
 

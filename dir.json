@@ -7,5 +7,12 @@
     "LLFF": {
         "testing_dir": "./data/LLFF/raw",
         "dataset": "LLFF"
+    },
+
+    "TNT_Masked": {
+        "validating_dir": "./data/TanksAndTemples",
+        "training_dir": "./data/TanksAndTemples",
+        "testing_dir": "./data/TanksAndTemples",
+        "dataset": "TNTMasked"
     }
 }
