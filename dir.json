@@ -10,9 +10,12 @@
     },
 
     "TNT_Masked": {
-        "validating_dir": "./data/TanksAndTemples",
-        "training_dir": "./data/TanksAndTemples",
         "testing_dir": "./data/TanksAndTemples",
         "dataset": "TNTMasked"
+    },
+
+    "SYNMVS": {
+        "testing_dir": "./data/nerf_synthetic",
+        "dataset": "SYNMVS"
     }
 }

@@ -27,6 +27,8 @@ You can find the pre-processed DTU and LLFF datasets in the [Google Drive link](
 
 TanksAndTemples (TNT) dataset is under this [link](https://drive.google.com/file/d/1ZH1zTbl6c5QtTJyxfTG1toVEPSkdSwXz/view?usp=share_link).
 
+For the NeRF-Synthetic(SYNMVS) dataset, download from the [original release](https://drive.google.com/drive/folders/1JDdLGDruGNXWnM1eqY1FNL9PlStjaKWi?usp=sharing). 
+
 Put the raw data and depths under `./data`.
 
 The datasets should have the following structure:
@@ -42,6 +44,9 @@ The datasets should have the following structure:
 |   |   └── depths  
 |   |   └── processed_masks
 |   |   └── ...
+|   ├── nerf-synthetic
+|   |   └── lego
+|   |   └── ...
 ```
 
 # Evaluate the Pre-trained Models
@@ -52,6 +57,8 @@ You can find the saved checkpoints/pointclouds in the [Google Drive link](https:
 Put the downloaded `*.pth` and `*.pt` under `./saved_checkpoints` and `./saved_pointclouds`, respectively.
 
 For the TNT dataset, the checkpoints and pointclouds are in [this link](https://drive.google.com/drive/folders/1GVO5v8XZO0Navh50eIvpiYAYbvr56g6K?usp=share_link) and [this link](https://drive.google.com/file/d/1eSVGHC6NFr06rW0xbR94b1wytntSbDqm/view?usp=share_link), respectively.
+
+For the NeRF-Synthetic(SYNMVS) dataset, the checkpoints and pointclouds are in [this link](https://drive.google.com/drive/folders/15xm9s39n0DNo6NhABNmrvOB3MVDsRxmK?usp=sharing) and [this link](https://drive.google.com/file/d/1OZqfn4jzonz2MOMx9xNctR1WrByFa1vB/view?usp=share_link), respectively.
 
 The checkpoints' file size could be large. Therefore, you can download the checkpoints on each individual scenes separately, but please put them following this structure:
 
@@ -64,7 +71,10 @@ The checkpoints' file size could be large. Therefore, you can download the check
 |   |   └── ..._fern_....pth   # checkpoints for the fern scene 
 |   |   └── ...  
 |   ├── TNT
-|   |   └── ..._Ignatius....pth   # checkpoints for the Ignatius scene 
+|   |   └── ..._Ignatius_....pth   # checkpoints for the Ignatius scene 
+|   |   └── ...  
+|   ├── SYNMVS
+|   |   └── ..._lego_....pth   # checkpoints for the lego scene 
 |   |   └── ...  
 |
 ├── saved_pointclouds                                                                                                                                                                                                      
@@ -77,13 +87,26 @@ The checkpoints' file size could be large. Therefore, you can download the check
 |   ├── TNT
 |   |   └── Ignatius.ply   # sculpted pointclouds for the Ignatius scene 
 |   |   └── ...  
+|   ├── SYNMVS
+|   |   └── ..._lego_....ply   # sculpted pointclouds for the lego scene 
+|   |   └── ...  
 ```
 
-Then run the following command:
+For DTU and LLFF, run the following command:
 ```
 sh eval.sh <dataset_name> <scene_name>
 ```
 Where `<dataset_name>` is `DTUHR` for the DTU dataset and `LLFF` for the LLFF dataset.
+
+For TNT, run the following command:
+```
+sh TNT_Masked_pcloud_pulsar_eval.sh <scene_name>
+```
+
+For NeRF-Synthetic, run the following command:
+```
+sh SYNMVS_pcloud_pulsar_eval.sh <scene_name>
+```
 
 For example, if you run 
 ```
@@ -93,10 +116,7 @@ you will find this GIF in `./saved_videos` and the evaluation numbers are printe
 
 ![](https://github.com/princeton-vl/SNP/blob/main/figs/fern.gif)
 
-For TNT, run the following command:
-```
-sh TNT_Masked_pcloud_pulsar_eval.sh <scene_name>
-```
+
 
 # Train from Scratch
 Run
